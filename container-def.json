@@ -1,0 +1,21 @@
+[
+    {
+      "name": "hello-world",
+      "image": "https://hub.docker.com/_/hello-world",
+      "cpu": 250,
+      "memory": 256,
+      "essential": true,
+      "portMappings": [
+        {
+          "containerPort": 80
+        }
+      ],
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group" : "/ecs/frontend-container",
+          "awslogs-region": "us-east-1"
+        }
+      }
+    }
+]
